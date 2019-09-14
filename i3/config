@@ -209,7 +209,7 @@ exec --no-startup-id i3-msg 'workspace 2; exec spotify'
 exec --no-startup-id i3-msg 'workspace 5; exec signal-desktop'
 exec --no-startup-id i3-msg 'workspace 5; exec caprine'
 
-# set keyboard shortcuts
+# set media keyboard shortcuts
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
@@ -218,17 +218,11 @@ bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Explorer exec playerctl play-pause
 bindsym XF86LaunchA exec playerctl next
 
-# old volume-commands
-#bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer -D pulse sset Master '5%+'"
-#bindsym XF86AudioLowerVolume exec --no-startup-id "amixer -D pulse sset Master '5%-'"
-#bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse sset Master toggle"
-#bindsym XF86AudioMicMute exec --no-startup-id "amixer -D pulse sset Capture toggle"
-
+# volume-commands
 bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up"
 bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down"
 bindsym XF86AudioMute exec --no-startup-id "pulseaudio-ctl mute"
 bindsym XF86AudioMicMute exec --no-startup-id "pulseaudio-ctl mute-input"
-
 
 # monitor brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight +5"
