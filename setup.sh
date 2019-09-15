@@ -15,6 +15,16 @@ symlink "i3/config" ".config/i3/config"
 symlink "i3/i3blocks.conf" ".config/i3/i3blocks.conf"
 symlink "i3/i3exit" ".config/i3/i3exit"
 
+# Ensure that '~/.config/fish/functions' exists before symlinking fish-centric dots
+mkdir -p "$HOME/.config/fish/functions"
+symlink "fish/config.fish" ".config/fish/config.fish"
+symlink "fish/fish_user_key_bindings.fish" ".config/fish/fish_user_key_bindings.fish"
+symlink "fish/fish_variables" ".config/fish/fish_variables"
+# Do fish-functions next
+symlink "fish/functions/ls.fish" ".config/fish/functions/ls.fish"
+symlink "fish/functions/monitor.fish" ".config/fish/functions/monitor.fish"
+symlink "fish/functions/workflow.fish" ".config/fish/functions/workflow.fish"
+
 # Ensure that parent dir exists before symlinking scripts
 mkdir -p "$HOME/scripts"
 symlink "scripts/workflow.sh" "scripts/workflow.sh"
