@@ -214,6 +214,10 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# set Ducky Mini v2 media-keybinds
+bindsym Print exec "playerctl play-pause"
+bindsym Scroll_Lock exec "playerctl next"
+
 # special Thinkpad-keys
 bindsym XF86Explorer exec playerctl play-pause
 bindsym XF86LaunchA exec playerctl next
