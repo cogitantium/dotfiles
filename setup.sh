@@ -9,6 +9,8 @@ symlink() {
 
 symlink "bashrc" ".bashrc"
 
+symlink "betterlockscreen/betterlockscreenrc" ".config/betterlockscreenrc"
+
 # Ensure that '~/.config/i3' exists before symlinking i3-centric dots
 mkdir -p "$HOME/.config/i3"
 symlink "i3/config" ".config/i3/config"
