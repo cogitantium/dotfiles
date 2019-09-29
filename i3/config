@@ -199,6 +199,11 @@ exec --no-startup-id setxkbmap dk
 bindsym $mod+m move workspace to output right
 bindsym $mod+n move workspace to output up
 
+# apply layouts
+exec --no-startup-id "i3-msg 'workspace 2; append_layout ~/dotfiles/i3/layouts/workspace2.json'"
+exec --no-startup-id "i3-msg 'workspace 4; append_layout ~/dotfiles/i3/layouts/workspace4.json'"
+exec --no-startup-id "i3-msg 'workspace 5; append_layout ~/dotfiles/i3/layouts/workspace5.json'"
+
 # autostart applications
 exec --no-startup-id i3-msg 'workspace 1; exec firefox'
 exec --no-startup-id i3-msg 'workspace 1; exec termite'

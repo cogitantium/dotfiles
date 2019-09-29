@@ -1,0 +1,28 @@
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "name": "Messenger",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Caprine$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "name": "Signal",
+    "percent": 0.5,
+    "swallows": [
+       {
+       "class": "^Signal$"
+       }
+    ],
+    "type": "con"
+}
+
