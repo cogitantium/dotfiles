@@ -194,10 +194,9 @@ exec --no-startup-id feh --bg-scale ~/pictures/arc-theme-background-colour.png
 # set keymap on load
 exec --no-startup-id setxkbmap dk
 
-# move current workspace to primary monitor
-#bindsym $mod+m exec --no-startup-id ~/scripts/mvworkspaceprimary.sh
-bindsym $mod+m move workspace to output right
-bindsym $mod+n move workspace to output up
+# move current workspace to next monitor. Note; if no workspace exists upwards, no action is taken,
+# so assuming a strictly horisontal or vertical multi-monitor setup, this does either - not both.
+bindsym $mod+m move workspace to output right; move workspace to output up
 
 # apply layouts
 # TODO: Spotify is slippery - won't get consumed by class (currently-playing is an issue)
