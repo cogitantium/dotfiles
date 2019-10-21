@@ -40,9 +40,9 @@ for_window [class="Gnome-calculator"] floating enable
 workspace_auto_back_and_forth yes
 
 # define default workspace for default applications
-assign [class="^discord$"] $ws2
-assign [class="^Caprine$"] $ws5
-for_window [class="Spotify"] move to workspace $ws2
+#assign [class="^discord$"] $ws2
+#assign [class="^Caprine$"] $ws5
+#for_window [class="Spotify"] move to workspace $ws2
 
 # start a terminal
 bindsym $mod+Return exec termite
@@ -109,16 +109,16 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:一"
-set $ws2 "2:二"
-set $ws3 "3:三"
-set $ws4 "4:四"
-set $ws5 "5:五"
-set $ws6 "6:六"
-set $ws7 "7:七"
-set $ws8 "8:八"
-set $ws9 "9:九"
-set $ws10 "10:零"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -199,10 +199,10 @@ bindsym $mod+m move workspace to output right; move workspace to output up
 
 # apply layouts
 # TODO: Spotify is slippery - won't get consumed by class (currently-playing is an issue)
-exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/dotfiles/i3/layouts/workspace2.json'" 
+#exec --no-startup-id "i3-msg 'workspace $ws2; append_layout ~/dotfiles/i3/layouts/workspace2.json'" 
 # TODO: catching specific firefox window by instance? 
-exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/dotfiles/i3/layouts/workspace4.json'" 
-exec --no-startup-id "i3-msg 'workspace $ws5; append_layout ~/dotfiles/i3/layouts/workspace5.json'"
+#exec --no-startup-id "i3-msg 'workspace $ws4; append_layout ~/dotfiles/i3/layouts/workspace4.json'" 
+#exec --no-startup-id "i3-msg 'workspace $ws5; append_layout ~/dotfiles/i3/layouts/workspace5.json'"
 
 # autostart applications
 exec --no-startup-id i3-msg 'workspace $ws1; exec firefox'
