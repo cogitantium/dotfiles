@@ -40,3 +40,6 @@ symlink "scripts/mvworkspaceprimary.sh" "scripts/mvworkspaceprimary.sh"
 symlink "scripts/testnotifications.sh" "scripts/testnotifications.sh"
 symlink "scripts/i3-get-window-criteria" "scripts/i3-get-window-criteria"
 
+# Ensure that dunst-config dir exists before symlinking
+mkdir -p "$HOME/.config/dunst"
+symlink "dunst/dunstrc" ".config/dunst/dunstrc"
