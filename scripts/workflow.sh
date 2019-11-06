@@ -19,6 +19,9 @@ connection() {
     fi
 }
 
+set_keyboard_layout() {
+	setxkbmap -layout dk
+}
 preload_sudo() {
     sudo echo
 }
@@ -33,6 +36,7 @@ elif [[ $# -gt 0 ]]; then
     case "$1" in
         home)
             printf "Setting up $1 environment\n"
+	    set_keyboard_layout
             preload_sudo
             monitor $1
             connection $1
@@ -40,6 +44,7 @@ elif [[ $# -gt 0 ]]; then
             ;;
         work)
             printf "Setting up $1 environment\n"
+	    set_keyboard_layout
             preload_sudo
             monitor $1
             connection $1
@@ -47,6 +52,7 @@ elif [[ $# -gt 0 ]]; then
             ;;
         portable)
             printf "Setting up $1 environment\n"
+	    set_keyboard_layout
             monitor $1
             printf "Finished setting up $1 environment\n"
             ;;
