@@ -1,6 +1,8 @@
 #!/bin/bash
 lock() {
-	betterlockscreen -l -t "user@thinktop"
+	#betterlockscreen -l -t "user@thinktop" ##old locker
+	# activate x locker through xset
+	xset s activate 
 }
 
 case "$1" in
