@@ -240,10 +240,13 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight +5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -5"
 
 # toggle touchpad
-bindsym XF86Tools exec --no-startup-id ~/scripts/xinput-toggle -r "Synaptics TM3053-004"
+bindsym XF86Tools exec --no-startup-id ~/projects/xinput-toggle/xinput-toggle -r "Synaptics TM3053-004" -n
 
 # screenshot bind
 bindsym	$mod+p exec escrotum -s -C
+
+# lock-screen setup
+exec --no-startup-id "source /home/user/.profile; xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock"
 
 # power menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
