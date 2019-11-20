@@ -221,6 +221,12 @@ bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# smartbinds for media
+bindsym Control+F1 exec --no-startup-id "playerctl play-pause"
+bindsym Control+F2 exec --no-startup-id "amixer sset Master 5%- && pkill -RTMIN+10 i3blocks"
+bindsym Control+F3 exec --no-startup-id "amixer sset Master 5%+ && pkill -RTMIN+10 i3blocks"
+bindsym Control+F4 exec --no-startup-id "playerctl next"
+
 # set Ducky Mini v2 media-keybinds
 bindsym Print exec "playerctl play-pause"
 bindsym Scroll_Lock exec "playerctl next"
@@ -230,10 +236,10 @@ bindsym XF86Explorer exec playerctl play-pause
 bindsym XF86LaunchA exec playerctl next
 
 # volume-commands
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pulseaudio-ctl up && pkill -RTMIN+10 i3blocks"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pulseaudio-ctl down && pkill -RTMIN+10 i3blocks"
-bindsym XF86AudioMute exec --no-startup-id "pulseaudio-ctl mute && pkill -RTMIN+10 i3blocks"
-bindsym XF86AudioMicMute exec --no-startup-id "pulseaudio-ctl mute-input && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer sset Master 5%+ && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer sset Master 5%- && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master 1+ toggle && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioMicMute exec --no-startup-id "amixer -D pulse set Capture 1+ toggle && pkill -RTMIN+10 i3blocks"
 
 # monitor brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight +5"
