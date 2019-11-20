@@ -1,8 +1,6 @@
 #!/bin/bash
 lock() {
-	#betterlockscreen -l -t "user@thinktop" ##old locker
-	# activate x locker through xset
-	xset s activate 
+	i3lock -c 2f343f -e
 }
 
 case "$1" in
@@ -13,7 +11,7 @@ case "$1" in
         i3-msg exit
         ;;
     suspend)
-        systemctl suspend # Assumes that suspend-target is setup to lock
+        lock && systemctl suspend
         ;;
     hibernate)
         lock && systemctl hibernate
