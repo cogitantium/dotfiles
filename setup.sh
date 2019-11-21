@@ -11,6 +11,8 @@ symlink "bashrc" ".bashrc"
 
 symlink "xinitrc" ".xinitrc"
 
+symlink "Xmodmap" ".Xmodmap"
+
 symlink "betterlockscreen/betterlockscreenrc" ".config/betterlockscreenrc"
 
 # Ensure that '~/.config/i3/layouts' exists before symlinking i3-centric dots
