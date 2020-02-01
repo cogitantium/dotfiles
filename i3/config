@@ -45,7 +45,7 @@ workspace_auto_back_and_forth yes
 #for_window [class="Spotify"] move to workspace $ws2
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec konsole
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -193,6 +193,15 @@ exec --no-startup-id feh --bg-scale ~/pictures/arc-theme-background-colour.png
 # set keymap on load
 exec --no-startup-id setxkbmap dk
 
+# load modmap
+exec --no-startup-id xmodmap .Xmodmap
+
+# fire up redshift in the background
+exec --no-startup-id redshift
+
+# start picom compositor with shadows, multihead on each output, and daemon enabled
+exec --no-startup-id picom
+
 # move current workspace to next monitor. Note; if no workspace exists upwards, no action is taken,
 # so assuming a strictly horisontal or vertical multi-monitor setup, this does either - not both.
 bindsym $mod+m move workspace to output right; move workspace to output up
@@ -246,7 +255,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id "xbacklight +5"
 bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -5"
 
 # toggle touchpad
-bindsym XF86Tools exec --no-startup-id ~/projects/xinput-toggle/xinput-toggle -r "Synaptics TM3053-004" -n
+bindsym XF86Tools exec --no-startup-id xinput-toggle -r "Synaptics TM3053-004" -n
 
 # screenshot bind
 bindsym	$mod+p exec escrotum -s -C
