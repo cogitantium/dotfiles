@@ -51,9 +51,10 @@ elif [[ $# -gt 0 ]]; then
             printf "Finished setting up $1 environment\n"
             ;;
         portable)
-            printf "Setting up $1 environment\n"
+            printf "Setting up $1 with work-network environment\n"
 	    set_keyboard_layout
             monitor $1
+	    connection "work"
             printf "Finished setting up $1 environment\n"
             ;;
         *)
