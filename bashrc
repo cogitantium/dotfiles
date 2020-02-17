@@ -15,3 +15,4 @@ alias gc='git commit -m '
 alias gd='git diff'
 alias gch='git checkout'
 alias gr='git remote'
+source /usr/share/nvm/init-nvm.sh
