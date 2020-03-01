@@ -204,6 +204,7 @@ exec --no-startup-id picom
 # move current workspace to next monitor. Note; if no workspace exists upwards, no action is taken,
 # so assuming a strictly horisontal or vertical multi-monitor setup, this does either - not both.
 bindsym $mod+m move workspace to output right; move workspace to output up
+bindsym $mod+b exec --no-startup-id "~/scripts/i3-swap-output.sh"
 
 # apply layouts
 # TODO: Spotify is slippery - won't get consumed by class (currently-playing is an issue)
