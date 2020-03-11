@@ -1,17 +1,15 @@
 #!/bin/bash
-lock() {
-	i3lock -c 2f343f -e
-}
 
 case "$1" in
 	lock)
-            lock
+        betterlockscreen -l
         ;;
     logout)
         i3-msg exit
         ;;
     suspend)
-        lock && systemctl suspend
+        playerctl pause
+        betterlockscreen -s
         ;;
     hibernate)
         lock && systemctl hibernate
