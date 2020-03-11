@@ -60,5 +60,7 @@ elif [[ $1 =~ work ]]; then
     # work is to the right of laptop
     set_above $work $laptop
     disable_output $home
+else
+    printf "Could not match %s to any known setup in {home, work, portable}\n" "$1"
 fi
 
