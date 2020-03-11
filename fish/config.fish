@@ -23,3 +23,5 @@ if not set -q abbrs_initialized
 
   echo 'Done'
 end
+
+bind \co ranger-cd
