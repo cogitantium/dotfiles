@@ -36,6 +36,13 @@ for_window [class="^.*"] border pixel 0
 for_window [class="GameOfLife-Main"] floating enable # Legacy for developing cellmata-lang
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Blueman-manager"] floating enable
+for_window [class="Display"] floating enable
+floating_maximum_size 1680 x 1050
+
+# hotfix for Teams notification which are not using dbus currently
+no_focus [title="Microsoft Teams Notification"]
+#for_window [title="Microsoft Teams Notification"] move absolute position 4812 px 1316 px
+for_window [title="Microsoft Teams Notification"] floating enable
 
 # Automatic back-and-forth when switching to the current workspace by switching to same workspace
 workspace_auto_back_and_forth yes
