@@ -205,9 +205,6 @@ exec --no-startup-id xmodmap .Xmodmap
 # fire up redshift in the background
 exec --no-startup-id redshift
 
-# start picom compositor with shadows, multihead on each output, and daemon enabled
-exec --no-startup-id picom
-
 # move current workspace to next monitor. Note; if no workspace exists upwards, no action is taken,
 # so assuming a strictly horisontal or vertical multi-monitor setup, this does either - not both.
 bindsym $mod+m move workspace to output right; move workspace to output up
@@ -269,6 +266,9 @@ bindsym	$mod+p exec escrotum -s -C
 
 # lock-screen setup
 exec --no-startup-id "source /home/user/.profile; xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock"
+
+# autotiling
+exec_always --no-startup-id autotiling
 
 # power menu
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
