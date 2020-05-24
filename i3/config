@@ -249,8 +249,8 @@ bindsym XF86Explorer exec playerctl play-pause
 bindsym XF86LaunchA exec playerctl next
 
 # volume-commands
-bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer sset Master 5%+ && pkill -RTMIN+10 i3blocks"
-bindsym XF86AudioLowerVolume exec --no-startup-id "amixer sset Master 5%- && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks"
 bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master 1+ toggle && pkill -RTMIN+10 i3blocks"
 bindsym XF86AudioMicMute exec --no-startup-id "amixer -D pulse set Capture 1+ toggle && pkill -RTMIN+10 i3blocks"
 
@@ -262,7 +262,9 @@ bindsym XF86MonBrightnessDown exec --no-startup-id "xbacklight -5"
 bindsym XF86Tools exec --no-startup-id xinput-toggle -r "Synaptics TM3053-004" -n
 
 # screenshot bind
-bindsym	$mod+p exec escrotum -s -C
+bindsym	$mod+p exec --no-startup-id "escrotum -sC"
+# screencap bind, does not seem to capture exit combination
+bindsym $mod+Shift+p exec "escrotum -sr ~/scrots/'%Y-%m-%d-%H%M%S_$wx$h.webm'"
 
 # lock-screen setup
 exec --no-startup-id "source /home/user/.profile; xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock"
