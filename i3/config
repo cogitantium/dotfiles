@@ -249,8 +249,8 @@ bindsym XF86Explorer exec playerctl play-pause
 bindsym XF86LaunchA exec playerctl next
 
 # volume-commands
-bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5% && pkill -RTMIN+10 i3blocks"
-bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5% && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ +5% && canberra-gtk-play -i audio-volume-change && pkill -RTMIN+10 i3blocks"
+bindsym XF86AudioLowerVolume exec --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ -5% && canberra-gtk-play -i audio-volume-change && pkill -RTMIN+10 i3blocks"
 bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master 1+ toggle && pkill -RTMIN+10 i3blocks"
 bindsym XF86AudioMicMute exec --no-startup-id "amixer -D pulse set Capture 1+ toggle && pkill -RTMIN+10 i3blocks"
 
