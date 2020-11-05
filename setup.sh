@@ -43,6 +43,7 @@ symlink "scripts/monitorhandler.sh" "scripts/monitorhandler.sh"
 symlink "scripts/mvworkspaceprimary.sh" "scripts/mvworkspaceprimary.sh"
 symlink "scripts/testnotifications.sh" "scripts/testnotifications.sh"
 symlink "scripts/i3-get-window-criteria" "scripts/i3-get-window-criteria"
+symlink "scripts/escrotum-vid.sh" "scripts/escrotum-vid.sh"
 
 # Ensure that dunst-config dir exists before symlinking
 mkdir -p "$HOME/.config/dunst"

@@ -264,8 +264,8 @@ bindsym XF86Tools exec --no-startup-id xinput-toggle -r "Synaptics TM3053-004" -
 
 # screenshot bind
 bindsym	$mod+p exec --no-startup-id "escrotum -sC"
-# screencap bind, does not seem to capture exit combination
-bindsym $mod+Shift+p exec "escrotum -sr ~/scrots/'%Y-%m-%d-%H%M%S_$wx$h.webm'"
+# screencap bind with autoupload
+bindsym $mod+Shift+p exec --no-startup-id /home/user/scripts/escrotum-vid.sh
 
 # lock-screen setup
 exec --no-startup-id "source /home/user/.profile; xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock"
