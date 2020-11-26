@@ -9,6 +9,8 @@ symlink() {
 
 symlink "bashrc" ".bashrc"
 
+symlink "vim/.vimrc" ".vimrc"
+
 symlink "xinitrc" ".xinitrc"
 
 symlink "Xmodmap" ".Xmodmap"
