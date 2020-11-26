@@ -1,0 +1,13 @@
+version: "3"
+services:
+  jellyfin:
+    image: jellyfin/jellyfin
+    user: 1000:1000
+    network_mode: "host"
+    volumes:
+      - /home/user/media/jellyfin/config:/config
+      - /home/user/media/jellyfin/cache:/cache
+      - /home/user/media:/media
+      - /home/user/torrents:/torrents
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
